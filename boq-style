@@ -1,0 +1,2320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOQ Demo Form</title>
+    <meta name="referrer" content="never">
+    <meta type="xrm/designer/setting" name="type" value="marketing-designer-content-editor-document">
+    <meta type="xrm/designer/setting" name="layout-editable" value="marketing-designer-layout-editable">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+      @font-face{font-family: 'Geologica';font-style: normal;font-weight: 100 900;font-display: swap;src: url(https://fonts.gstatic.com/s/geologica/v1/oY1l8evIr7j9P3TN9YwNAdyjzUyDKkKdAGOJh1UlCDUIhAIdhCZOn1fLsig7jfvCCPHZckUWE1lELWNN-w.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+      .geologica-<uniquifier> {
+      font-family: "Geologica", serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+      font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0,
+        "SHRP" 0;
+      }
+      </style>
+
+      <style>
+      .editor-control-layout html {
+      box-sizing: border-box;
+      background-color: #fff;
+      }
+      body {
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      }
+      .editor-control-layout *,
+      .editor-control-layout *:before,
+      .editor-control-layout *:after {
+      box-sizing: inherit;
+      }
+      .marketingForm h1 {
+      color: #1A2027;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      font-family: "Geologica", Arial, sans-serif;
+      line-height: 1.25;
+      font-size: 28px;
+      }
+      .marketingForm h2 {
+      color: #1A2027;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      line-height: 1.25;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 22px;
+      }
+      .marketingForm h3 {
+      color: #1A2027;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      line-height: 1.25;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 18px;
+      }
+      .marketingForm h4 {
+      color: #1A2027;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      font-weight: 600;
+      line-height: 20px;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 16px;
+      }
+      .marketingForm p {
+      margin: 0px;
+      padding: 0px;
+      line-height: 18px;
+      font-weight: 400;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 14px;
+      color: #5C6570;
+      }
+      .marketingForm a,
+      div[data-editorblocktype="Captcha"] td:nth-of-type(2) a {
+      text-decoration: none;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 14px;
+      }
+      .marketingForm .primaryButtonWrapper,
+      .submitButtonWrapper {
+      text-align: left;
+      margin: 0;
+      }
+      .marketingForm .primaryButton,
+      .submitButton {
+      font-family: "Geologica", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      background-color: #0069F2;
+      border: none;
+      border-radius: 6px;
+      color: #FFF;
+      padding: 20px 24px;
+      cursor: pointer;
+      transition: all 0.3s;
+      }
+      .marketingForm .primaryButton:hover,
+      .submitButton:hover {
+      background-color: #005BDF;
+      transition: all 0.3s;
+      cursor: pointer;
+      }
+      .marketingForm .secondaryButton {
+      font-family: "Geologica", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      background-color: #ffffff;
+      border: 1px solid #0082dd;
+      border-radius: 4px;
+      color: #2266e3;
+      padding: 10px 20px;
+      margin: 0px;
+      cursor: pointer;
+      }
+      .zero-state-container span {
+      font-family: "Geologica", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      color: #242424;
+      }
+      form.marketingForm {
+      color: #000;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 14px;
+      }
+      [data-layout="true"] {
+      margin: 0 auto;
+      max-width: 656px;
+      background-color: rgba(255, 255, 255, 0);
+      }
+      div[data-editorblocktype="SubmitButton"] {
+      padding: 0;
+      }
+      div[data-editorblocktype="Captcha"] {
+      padding: 20px 0;
+      }
+      div[data-editorblocktype="Captcha"] table,
+      div[data-editorblocktype="Captcha"] div > table > tbody > tr > td:nth-of-type(2) {
+      width: 100% !important;
+      }
+      div[data-editorblocktype="Captcha"] div > div > table > tbody > tr:first-of-type > td:last-of-type {
+      padding-bottom: 12px !important;
+      }
+      div[data-editorblocktype="Captcha"] tr[id="wlspispHIPErrorContainer"] {
+      margin-top: 20px;
+      }
+      div[data-editorblocktype="Captcha"] tr[id="wlspispHIPErrorContainer"] td:nth-of-type(2) {
+      width: auto !important;
+      }
+      div[data-editorblocktype="Captcha"] tr[id="wlspispHIPErrorContainer"] img {
+      display: flex;
+      }
+      div[data-editorblocktype="Captcha"] td:nth-of-type(2) > div > div {
+      margin-top: 4px;
+      }
+      div[data-editorblocktype="Captcha"] td:nth-of-type(2) > div > div * {
+      font-weight: 400;
+      }
+      div[data-editorblocktype="Captcha"] td:nth-of-type(2) > div > div b {
+      color: #797775;
+      }
+      div[data-editorblocktype="Captcha"] tr:nth-of-type(2) > td {
+      height: 0px !important;
+      }
+      div[data-editorblocktype="Captcha"] td input {
+      margin-top: 20px !important;
+      padding: 6px 8px !important;
+      width: 100% !important;
+      }
+      div[data-editorblocktype="Captcha"] div[id^="wlspaudioBtnHolder"] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+      div[data-editorblocktype="About"],
+      div[data-editorblocktype="Sessions"],
+      div[data-editorblocktype="Speakers"] {
+      padding: 32px 24px;
+      }
+      .textFormFieldBlock,
+      .dateTimeFormFieldBlock,
+      .twoOptionFormFieldBlock,
+      .optionSetFormFieldBlock,
+      .multiOptionSetFormFieldBlock,
+      .lookupFormFieldBlock,
+      .phoneFormFieldBlock {
+      position: relative;
+      padding: 16px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      }
+      table.multi .textFormFieldBlock,
+      table.multi .dateTimeFormFieldBlock,
+      table.multi .twoOptionFormFieldBlock,
+      table.multi .optionSetFormFieldBlock,
+      table.multi .multiOptionSetFormFieldBlock,
+      table.multi .lookupFormFieldBlock {
+      padding: 0;
+      }
+      table {
+      transition: all 0.3s;
+      }
+      table.outer.error-space {
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+      }
+      .consentBlock {
+      padding: 4px 30px;
+      }
+      .char-count {
+      position: absolute;
+      right: 8px;
+      bottom: 52px;
+      font-size: 12px;
+      color: #838F9D;
+      text-align: right;
+      line-height: 16px;
+      }
+      .textFormFieldBlock label,
+      .dateTimeFormFieldBlock label,
+      .lookupFormFieldBlock label,
+      .twoOptionFormFieldBlock label.block-label,
+      .optionSetFormFieldBlock label.block-label,
+      .multiOptionSetFormFieldBlock label.block-label,
+      div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"],
+      .textFormFieldBlock label *,
+      .dateTimeFormFieldBlock label *,
+      .lookupFormFieldBlock label *,
+      .twoOptionFormFieldBlock label.block-label *,
+      .optionSetFormFieldBlock label.block-label *,
+      .multiOptionSetFormFieldBlock label.block-label *,
+      .consentBlock label p {
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1A2027;
+      }
+      .textFormFieldBlock label,
+      .dateTimeFormFieldBlock label,
+      .lookupFormFieldBlock label,
+      .twoOptionFormFieldBlock label.block-label,
+      .optionSetFormFieldBlock label.block-label,
+      .multiOptionSetFormFieldBlock label.block-label,
+      div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"] {
+      display: inline-block;
+      margin: 0;
+      margin-bottom: 12px;
+      padding: 0px;
+      flex: 1;
+      width: 100%;
+      }
+      .textFormFieldBlock label > *,
+      .dateTimeFormFieldBlock label > *,
+      .lookupFormFieldBlock label > *,
+      .twoOptionFormFieldBlock label.block-label > *,
+      .optionSetFormFieldBlock label.block-label > *,
+      .multiOptionSetFormFieldBlock label.block-label > *,
+      .consentBlock label > * {
+      display: inline-block;
+      }
+      .textFormFieldBlock label::after,
+      .dateTimeFormFieldBlock label::after,
+      .lookupFormFieldBlock label::after,
+      th.columnContainer h4::after,
+      .optionSetFormFieldBlock label.block-label::after,
+      .multiOptionSetFormFieldBlock label.block-label::after,
+      .consentBlock label p:first-of-type::after,
+      .eventSession label::after,
+      .twoOptionFormFieldBlock label::after,
+      div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"]::after {
+      width: auto;
+      display: inline-block;
+      line-height: 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 2px;
+      color: #c33400;
+      content: "*";
+      visibility: hidden;
+      }
+      .textFormFieldBlock label::after,
+      th.columnContainer h4::after,
+      div[data-required].textFormFieldBlock label::after,
+      div[data-required].dateTimeFormFieldBlock label::after,
+      div[data-required].lookupFormFieldBlock label::after,
+      div[data-required] div.twooption_checkbox label::after,
+      div[data-required] label.block-label::after,
+      div[data-required="true"].consentBlock label p:first-of-type::after,
+      div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"]::after {
+      visibility: visible;
+      }
+      .eventSessions div.eventSession div input[type="checkbox"]:checked + label::after {
+      visibility: visible;
+      }
+      .optionSetFormFieldBlock select,
+      .textFormFieldBlock input,
+      .dateTimeFormFieldBlock input,
+      .lookupFormFieldBlock input,
+      .marketingForm textarea,
+      div[data-editorblocktype="Captcha"] input {
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 15px;
+      color: #1A2027;
+      font-weight: 400;
+      padding: 16px;
+      background-color: #fff;
+      border: 1px solid #D4DBE3;
+      border-radius: 6px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      flex: 2 1 20%;
+      transition: all 0.3s;
+      }
+      .optionSetFormFieldBlock select,
+      .textFormFieldBlock input::placeholder,
+      .dateTimeFormFieldBlock input,
+      .lookupFormFieldBlock input::placeholder,
+      .marketingForm textarea::placeholder,
+      div[data-editorblocktype="Captcha"] input::placeholder {
+      color: #5C6570;
+      }
+      .textFormFieldBlock input:hover,
+      .marketingForm textarea:hover,
+      .dateTimeFormFieldBlock input:hover {
+      border: 1px solid #005BDF;
+      background: #DAEBFF;
+      background-color: #DAEBFF;
+      transition: all 0.3s;
+      }
+      .textFormFieldBlock input:hover:focus,
+      .marketingForm textarea:hover:focus {
+      background: #FFF;
+      background-color: #FFF;
+      transition: all 0.3s;
+      }
+      .textFormFieldBlock input:focus,
+      .dateTimeFormFieldBlock input:focus {
+      border:1px solid #005BDF;
+      outline: 2px solid #005BDF;
+      transition: all 0.3s;
+      }
+      .textFormFieldBlock textArea {
+      resize: none;
+      width: 100%;
+      height: 128px;
+      box-sizing: border-box;
+      }
+      .textFormFieldBlock textArea::-webkit-scrollbar {
+      width: 12px;
+      height: 48px;
+      }
+      .textFormFieldBlock textArea::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #D4DBE3;
+      border: 4px solid #FFF;
+      }
+      .textFormFieldBlock textArea::-webkit-scrollbar-track {
+      background-color: transparent;
+      }
+      .textFormFieldBlock textArea:focus {
+      border: 1px solid #005BDF;
+      outline: 2px solid #005BDF;
+      }
+      .textFormFieldBlock input[type="text"],
+      .textFormFieldBlock input[type="email"] {
+      max-height: 52px;
+      }
+      input[type="text"]:valid,
+      .phoneCountryCode + input[type="tel"]:valid,
+      input[type="email"]:valid,
+      input.datepicker.hasDatepicker.has-date[type="text"]:valid,
+      textarea:valid,
+      .phoneFormFieldBlock .phoneCountryCode.valid {
+      border:1px solid #008661;
+      background-color: #FFF;
+      transition: all 0.3s;
+      }
+      input[type="text"]:valid:hover,
+      .phoneCountryCode + input[type="tel"]:valid:hover,
+      input[type="email"]:valid:hover,
+      input.datepicker.hasDatepicker.has-date[type="text"]:valid:hover,
+      textarea:valid:hover,
+      .phoneFormFieldBlock .phoneCountryCode.valid:hover {
+      background-color: #DAEBFF;
+      transition: all 0.3s;
+      }
+      input.datepicker[type="text"]:valid {
+      border: 1px solid #D4DBE3;
+      transition: all 0.3s;
+      }
+      input.datepicker[type="text"]:hover {
+      border: 1px solid #005BDF;
+      transition: all 0.3s;
+      }
+      .lookupFormFieldBlock input {
+      background-image: url(data\003a image/svg+xml\003b base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiPjxwYXRoIGQ9Ik0xMzQ0IDBxOTcgMCAxODcgMjV0MTY4IDcxIDE0MiAxMTAgMTExIDE0MyA3MSAxNjggMjUgMTg3cTAgOTctMjUgMTg3dC03MSAxNjgtMTEwIDE0Mi0xNDMgMTExLTE2OCA3MS0xODcgMjVxLTEyNSAwLTIzOS00MnQtMjExLTEyMWwtNzg1IDc4NHEtMTkgMTktNDUgMTl0LTQ1LTE5LTE5LTQ1cTAtMjYgMTktNDVsNzg0LTc4NXEtNzktOTYtMTIxLTIxMHQtNDItMjQwcTAtOTcgMjUtMTg3dDcxLTE2OCAxMTAtMTQyVDk4OSA5NnQxNjgtNzEgMTg3LTI1em0wIDEyODBxMTE5IDAgMjI0LTQ1dDE4My0xMjQgMTIzLTE4MyA0Ni0yMjRxMC0xMTktNDUtMjI0dC0xMjQtMTgzLTE4My0xMjMtMjI0LTQ2cS0xMTkgMC0yMjQgNDVUOTM3IDI5NyA4MTQgNDgwdC00NiAyMjRxMCAxMTkgNDUgMjI0dDEyNCAxODMgMTgzIDEyMyAyMjQgNDZ6Ii8+PC9zdmc+);
+      background-repeat: no-repeat;
+      background-position-x: calc(100% - 17px);
+      background-position-y: center;
+      background-size: 1em 1em;
+      transition: all 0.2s;
+      }
+      .optionSetFormFieldBlock select {
+      background-image: url(data\003a image/svg+xml\003b base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEyIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02IDYuNzA4OThMMC4xNDY0ODQgMC44NTU0NjlMMC44NTU0NjkgMC4xNDY0ODRMNiA1LjI5MTAyTDExLjE0NDUgMC4xNDY0ODRMMTEuODUzNSAwLjg1NTQ2OUw2IDYuNzA4OThaIiBmaWxsPSIjNjA1RTVDIi8+Cjwvc3ZnPgo=);
+      background-repeat: no-repeat;
+      background-position-x: calc(100% - 17px);
+      background-position-y: center;
+      appearance: none;
+      outline: none;
+      min-height: 52px;
+      padding: 12px 16px;
+      transition: all 0.2s;
+      }
+      .optionSetFormFieldBlock select option {
+      background-color: #faf9f8;
+      }
+      .optionSetFormFieldBlock select:focus {
+      max-height: 52px;
+      border: 1px solid #005BDF;
+      outline: 2px solid #005BDF;
+      background-color: #FFFFFF;
+      }
+      .optionSetFormFieldBlock select:hover {
+      border: 1px solid #005BDF;
+      background-color: #DAEBFF;
+      transition: all 0.2s;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons,
+      .twoOptionFormFieldBlock div.twooption_checkbox,
+      .optionSetFormFieldBlock div.radiobuttons,
+      .multiOptionSetFormFieldBlock fieldset {
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 14px;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 8px;
+      gap: 8px;
+      flex: 2;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons,
+      .optionSetFormFieldBlock div.radiobuttons,
+      .multiOptionSetFormFieldBlock fieldset {
+      margin-top: 16px;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons > div,
+      .twoOptionFormFieldBlock div.twooption_checkbox > div,
+      .optionSetFormFieldBlock div.radiobuttons > div,
+      .multiOptionSetFormFieldBlock fieldset > div,
+      .consentBlock > div {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 16px;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons div label,
+      .optionSetFormFieldBlock div.radiobuttons div label {
+      position: absolute;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      text-align: center;
+      color: #1A2027;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      }
+      .twoOptionFormFieldBlock .radiobuttons div label::after {
+      display: none;
+      }
+      .twoOptionFormFieldBlock div.twooption_checkbox div label,
+      .twoOptionFormFieldBlock div.twooption_checkbox div label div,
+      .consentBlock div label p {
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      margin: 0;
+      }
+      .eventSessions div.eventSession div label,
+      .eventSessions div.eventSession div label div {
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      }
+      .multiOptionSetFormFieldBlock fieldset > div > label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      }
+      .twoOptionFormFieldBlock div.twooption_checkbox div input[type="checkbox"]:checked + label,
+      .twoOptionFormFieldBlock div.twooption_checkbox div input[type="checkbox"]:checked + label div,
+      .consentBlock div input[type="checkbox"]:checked + label p {
+      }
+      .eventSessions div.eventSession div input[type="checkbox"]:checked + label, .eventSessions div.eventSession div input[type="checkbox"]:checked + label div {
+      text-decoration: none;
+      font-weight: 400;
+      color: #000
+      }
+      .twoOptionFormFieldBlock div.radiobuttons,
+      .optionSetFormFieldBlock div.radiobuttons {
+      display: inline-block;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+      border-radius: 8px;
+      border: 1px solid #D4DBE3;
+      overflow: hidden;
+      transition: all 0.3s;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons.error {
+      border: 1px solid #BA0025;
+      transition: all 0.3s;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons div,
+      .optionSetFormFieldBlock div.radiobuttons div {
+      position: relative;
+      display: block;
+      width: 50%;
+      height: 50px;
+      background-color: #FFF;
+      transition: all 0.3s;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons div:hover,
+      .optionSetFormFieldBlock div.radiobuttons div:hover {
+      background-color: #DAEBFF;
+      transition: all 0.3s;
+      }
+      .optionSetFormFieldBlock div.radiobuttons div input[type="radio"]:checked + label,
+      .twoOptionFormFieldBlock div.radiobuttons div input[type="radio"]:checked + label {
+      color: #FFF;
+      transition: all 0.3s;
+      }
+      .optionSetFormFieldBlock div.radiobuttons div:has(input[type="radio"]:checked),
+      .twoOptionFormFieldBlock div.radiobuttons div:has(input[type="radio"]:checked) {
+      background-color: #0069F2;
+      transition: all 0.3s;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons div:first-child,
+      .optionSetFormFieldBlock div.radiobuttons div:first-child {
+      float: left;
+      border-right: 1px solid #D4DBE3;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons div:last-child,
+      .optionSetFormFieldBlock div.radiobuttons div:last-child {
+      float: right;
+      width: calc(50% - 1px);
+      }
+      .twoOptionFormFieldBlock div.twooption_checkbox > div, .consentBlock > div {
+      width: 100%;
+      border-radius: 0px;
+      background-color: transparent;
+      }
+      .eventSessions div.eventSession > div {
+      width: 100%;
+      border-radius: 0px;
+      background-color: transparent;
+      }
+      .twoOptionFormFieldBlock div.twooption_checkbox div,
+      .consentBlock div {
+      padding: 0px;
+      margin: 0px;
+      }
+      .eventSessions div.eventSession div {
+      padding: 0px;
+      margin: 0px;
+      }
+      .twoOptionFormFieldBlock div.radiobuttons div input,
+      .optionSetFormFieldBlock div.radiobuttons div input {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      appearance: none;
+      margin: 0;
+      padding: 6px;
+      border: none;
+      z-index: 1;
+      }
+      .twoOptionFormFieldBlock div.twooption_checkbox div input,
+      .multiOptionSetFormFieldBlock fieldset > div > input[type="checkbox"],
+      .eventSession > div > input[type="checkbox"],
+      .consentBlock div input {
+      margin: 0px;
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #D4DBE3;
+      background-color: #FFF;
+      background-position: center center;
+      background-size: 16px 16px;
+      border-radius: 2px;
+      flex-shrink: 0;
+      appearance: none;
+      transition: all 0.3s;
+      }
+      .twoOptionFormFieldBlock div.twooption_checkbox div input:hover,
+      .multiOptionSetFormFieldBlock fieldset > div > input[type="checkbox"]:hover {
+      border: 1.5px solid #005BDF;
+      background: #DAEBFF;
+      transition: all 0.3s;
+      }
+      .twoOptionFormFieldBlock div.twooption_checkbox div input:checked {
+      background-color: #0069F2;
+      background-image: url('https://james-mills.com.au/wp-content/uploads/BOQ/tick.svg');
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      background-position: center center;
+      border: inherit;
+      transition: all 0.3s;
+      }
+      .twoOptionFormFieldBlock div.twooption_checkbox div input::before {
+      }
+      .twooption_checkbox label.block-label::after {
+      display: none;
+      }
+      .eventSessions {
+      font-size: 16px;
+      line-height: 1.2;
+      border: none
+      }
+      .eventSession label b {
+      display:inline
+      }
+      .eventSession > div > input[type="checkbox"] {
+      float: right;
+      }
+      .marketingForm [dir="rtl"],
+      .marketingForm [dir="rtl"] * {
+      text-align: right;
+      }
+      .marketingForm s span {
+      text-decoration: line-through;
+      }
+      .marketingForm u span {
+      text-decoration: underline;
+      }
+      .dividerWrapper p span {
+      line-height: 0px;
+      }
+      .marketingForm ul,
+      .marketingForm ol {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      line-height: 125%;
+      line-height: 1.25;
+      padding-inline-end: 0px !important;
+      }
+      .marketingForm p img {
+      max-width: 100%;
+      }
+      .marketingForm u a {
+      text-decoration: underline;
+      }
+      .marketingForm .imageWrapper a img {
+      text-decoration: none;
+      border: 0px;
+      }
+      .marketingForm th.columnContainer,
+      .marketingForm th.inner {
+      height: 100% !important;
+      vertical-align: top !important;
+      font-weight: normal;
+      text-align: left;
+      }
+      .marketingForm [dir="rtl"] th.columnContainer,
+      .marketingForm [dir="rtl"] th.inner {
+      font-weight: normal;
+      text-align: right;
+      }
+      .notification-container {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      }
+      .notification-message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 38px;
+      border: 1.44737px solid#CCCCCC;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      }
+      .notification-message-hide {
+      display: none;
+      }
+      table.multi .phoneFormFieldBlock {
+      padding: 0px;
+      }
+      .phoneFormFieldBlock label,
+      .phoneFormFieldBlock label * {
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1A2027;
+      }
+      .phoneFormFieldBlock label {
+      display: inline-block;
+      margin: 0;
+      margin-bottom: 12px;
+      padding: 0px;
+      flex: 1;
+      width: 100%;
+      }
+      .phoneFormFieldBlock label > * {
+      display: inline-block;
+      }
+      .phoneFormFieldBlock label::after {
+      width: auto;
+      display: inline-block;
+      line-height: 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 2px;
+      color: #c33400;
+      content: "*";
+      visibility: hidden;
+      }
+      div[data-required].phoneFormFieldBlock label::after {
+      visibility: visible;
+      }
+      .phoneFormFieldBlock input::placeholder {
+      }
+      .phoneFormFieldBlock .phoneCountryCode {
+      display: flex;
+      flex: 2 1 20%;
+      align-items: center;
+      flex-direction: row;
+      box-sizing: border-box;
+      border: 1px solid #D4DBE3;
+      border-radius: 6px;
+      justify-content: center;
+      background-color: #FFF;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      max-height: 52px;
+      transition: all 0.3s;
+      }
+      .phoneFormFieldBlock .phoneCountryCodeLabel {
+      overflow: hidden;
+      margin: 0;
+      cursor: pointer;
+      padding-left: 15px;
+      padding-right: 0;
+      opacity: 1;
+      text-align: center;
+      color: #1A2027;
+      font-size: 16px;
+      align-items: center;
+      align-self: stretch;
+      display: flex;
+      transition: all 0.3s;
+      }
+      .phoneCountryCode:hover {
+      border: 1px solid #005BDF;
+      background-color: #DAEBFF;
+      transition: all 0.3s;
+      }
+      .phoneCountryCode input:-internal-autofill-selected {
+      background-color: #FFF !important;
+      transition: all 0.3s;
+      }
+      .phoneFormFieldBlock span[hidden] {
+      display: none;
+      }
+      .phoneFormFieldBlock input {
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 16px 15px 16px 8px;
+      background: none;
+      color: #1A2027;
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 52px;
+      box-sizing: border-box;
+      flex: 2;
+      border: none;
+      transition: border-color 0.3s;
+      }
+      .phoneFormFieldBlock input:focus {
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      }
+      .phoneCountryCode:has(input:focus) {
+      border:1px solid #005BDF;
+      outline:2px solid #005BDF;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+      }
+      .phoneCountryCode:has(input:focus):hover {
+      background-color: #FFF;
+      transition: all 0.3s;
+      }
+
+      /* Error message styling */
+      input.invalid,
+      select.invalid,
+      textarea.invalid,
+      .phoneFormFieldBlock.invalid .phoneCountryCode {
+      border: 1px solid #BA0025;
+      transition: all 0.3s;
+      }
+      .phoneFormFieldBlock.invalid .phoneCountryCode input.invalid {
+      border: none;
+      }
+      .error-message {
+      visibility: hidden;
+      opacity: 0;
+      color: #BA0025;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 8px;
+      margin-left: 24px;
+      transition: all 0.3s;
+      }
+      input.invalid + .error-message,
+      select.invalid + .error-message,
+      select.invalid ~ .error-message,
+      textarea.invalid ~ .error-message,
+      .optionSetFormFieldBlock .custom-select select.invalid + .error-message,
+      .twoOptionFormFieldBlock div.radiobuttons.error ~ .error-message,
+      .phoneFormFieldBlock.invalid .error-message,
+      .twoOptionFormFieldBlock div.radiobuttons input.invalid + .error-message,
+      .custom-select.error + .error-message,
+      .optionSetFormFieldBlock.error .error-message {
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.3s;
+      }
+      .error-message::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: auto;
+      height: 16px;
+      width: 16px;
+      background: url('https://james-mills.com.au/wp-content/uploads/BOQ/error.svg');
+      background-repeat: no-repeat;
+      }
+      .tooltip-wrap {
+      display: inline-flex;
+      align-items: center;
+      }
+      button.tooltip-btn {
+      display: block;
+      font-size: 12px;
+      width: 16px;
+      height: 16px;
+      border-radius: 20px;
+      background: #798492;
+      margin-left: 5px;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      }
+      span.tooltip {
+      position: absolute;
+      color: #1A2027;
+      background-color: #FFF;
+      width: 250px;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 400;
+      padding: 12px;
+      border-radius: 4px;
+      text-align: left;
+      transition: 0.3s;
+      opacity: 0;
+      box-shadow: 2px 2px 16px 0px #0000001A;
+      }
+      button.tooltip-btn:hover {
+      overflow: visible;
+      }
+      button.tooltip-btn:hover span.tooltip {
+      opacity: 1;
+      }
+      span.tooltip::after {
+      content: "";
+      position: absolute;
+      border: 10px solid transparent;
+      }
+      button.tooltip-btn[data-position = "top"] span.tooltip {
+      bottom: 26px;
+      left: -22px;
+      }
+      button.tooltip-btn[data-position = "top"] span.tooltip::after {
+      border-top-color: #fff;
+      left: 20px;
+      bottom: -18px;
+      }
+      .custom-select {
+      position: relative;
+      font-family: "Geologica", Arial, sans-serif;
+      }
+      .custom-select select {
+      display: none;
+      }
+      .select-selected {
+      display: grid;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #D4DBE3;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 16px;
+      color: #5C6570;
+      line-height: 20px;
+      border-radius: 6px;
+      width: 100%;
+      height: 100%;
+      min-height: 52px;
+      padding: 12px 16px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      flex: 2 1 20%;
+      transition: all 0.3s;
+      appearance: none;
+      outline: none;
+      }
+      .select-selected:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: 16px;
+      width: 12px;
+      height: 8px;
+      background: url('https://james-mills.com.au/wp-content/uploads/BOQ/chevron-down.svg');
+      background-repeat: no-repeat;
+      transform: translateY(-20%);
+      transition: all 0.3s;
+      }
+      .select-selected.select-arrow-active:after {
+      rotate: 180deg;
+      top: 40%;
+      transition: all 0.3s;
+      }
+      .select-selected:hover {
+      border: 1px solid #005BDF;
+      background: #DAEBFF;
+      background-color: #DAEBFF;
+      transition: all 0.3s;
+      }
+      .select-selected.select-arrow-active {
+      border: 1px solid #005BDF;
+      outline: 2px solid #005BDF;
+      background: #FFF;
+      background-color: #FFF;
+      transition: all 0.3s;
+      }
+      .custom-select select.invalid + .select-selected {
+      border: 1px solid #BA0025;
+      }
+      .select-selected.has-selection {
+      color: #1A2027;
+      border: 1px solid #008661;
+      transition: all 0.3s;
+      }
+
+      /*
+      .select-items div,.select-selected {
+      color: #ffffff;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+      user-select: none;
+      } */
+
+      .select-items {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 6px;
+      margin-top: 12px;
+      top: 100%;
+      left: 0;
+      right: 0;
+      max-height: 400px;
+      overflow: scroll;
+      box-shadow: 2px 4px 20px 0px #0000001A;
+      z-index: 99;
+      }
+      .select-items div {
+      padding: 1rem;
+      color: #1A2027;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      }
+      .select-hide {
+      display: none;
+      }
+      .select-items div:hover {
+      background-color: #F7F9FC;
+      }
+      .same-as-selected {
+      background-color: #FFF;
+      border: 2px solid #0069F2;
+      }
+      .same-as-selected:first-child {
+      background-color: #FFF;
+      border: 2px solid #0069F2;
+      border-radius: 6px 6px 0px 0px;
+      }
+      .same-as-selected:last-child {
+      background-color: #FFF;
+      border: 2px solid #0069F2;
+      border-radius: 0px 0px 6px 6px;
+      }
+
+      /* Date Picker Calendar Styling */
+      input.datepicker {
+      position: relative;
+      background-image: url('https://james-mills.com.au/wp-content/uploads/BOQ/calendar.svg');
+      background-repeat: no-repeat;
+      background-position: right 18px center;
+      background-size: 17px 18px;
+      }
+      input.datepicker:hover {
+      position: relative;
+      background-color: #DAEBFF !important;
+      background-image: url('https://james-mills.com.au/wp-content/uploads/BOQ/calendar.svg');
+      background-repeat: no-repeat;
+      background-position: right 18px center;
+      background-size: 17px 18px;
+      }
+      #ui-datepicker-div {
+      display: none;
+      background-color: #FFF;
+      box-shadow: 2px 4px 20px 0px rgba(0,0,0,0.1);
+      margin-top: 12px;
+      border-radius: 6px;
+      padding: 24px 20px 20px 20px;
+      }
+      .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+      padding-bottom: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      }
+      table.ui-datepicker-calendar {
+      border-collapse: collapse;
+      border-spacing: 0;
+      }
+      .ui-datepicker-calendar thead th {
+      font-family: "Geologica", Arial, sans-serif;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #5C6570;
+      padding-bottom: 20px;
+      }
+      .ui-datepicker-calendar tbody td {
+      width: 40px;
+      text-align: center;
+      padding: 0;
+      padding-bottom: 2px;
+      }
+      .ui-datepicker-calendar tbody td a {
+      font-family: "Geologica", Arial, sans-serif;
+      display: block;
+      border-radius: 100px;
+      line-height: 20px;
+      transition: 0.3s all;
+      color: #1A2027;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 8px;
+      }
+      .ui-datepicker-calendar tbody td a:hover {  
+      background-color: #DAEBFF;
+      transition: 0.3s all;
+      }
+      .ui-datepicker-calendar tbody td a.ui-state-active {
+      background-color: #0069F2;
+      color: white;
+      }
+      .ui-datepicker-header a.ui-corner-all {
+      cursor: pointer;
+      display: inline-flex;
+      width: 28px;
+      height: 22px;
+      margin: 0 5px;
+      transition: 0.3s all;
+      }
+      .ui-datepicker-header a.ui-corner-all:hover {
+      background-color: #DAEBFF;
+      border-radius: 100px;
+      transition: 0.3s all;
+      }
+      .ui-datepicker-header a.ui-datepicker-prev {  
+      background: url("https://james-mills.com.au/wp-content/uploads/BOQ/chevron-down.svg");
+      background-repeat: no-repeat;
+      background-size: 12px 8px;
+      background-position: 50%;
+      transform: rotate(180deg);
+      }
+      .ui-datepicker-header a.ui-datepicker-next {
+      background: url('https://james-mills.com.au/wp-content/uploads/BOQ/chevron-down.svg');
+      background-repeat: no-repeat;
+      background-size: 12px 8px;
+      background-position: 50%;
+      }
+      .ui-datepicker-prev {
+      order: 2;
+      }
+      .ui-datepicker-next {
+      order: 3;
+      }
+      .ui-datepicker-header a>span {
+      display: none;
+      }
+      .ui-datepicker-title {
+      font-family: "Geologica", Arial, sans-serif;
+      text-align: left;
+      line-height: 20px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1A2027;
+      order: 1;
+      justify-content: left;
+      display: flex;
+      width: 100%;
+      }
+      .ui-datepicker-week-col {
+      color: #78909C;
+      font-weight: 400;
+      font-size: 0.75rem;
+      }
+      .ui-datepicker-buttonpane.ui-widget-content {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding-top: 20px;
+      }
+      button.ui-datepicker-clear.ui-state-default.ui-priority-primary.ui-corner-all,
+      button.ui-datepicker-current.ui-state-default.ui-priority-secondary.ui-corner-all,
+      button.ui-datepicker-close.ui-state-default.ui-priority-primary.ui-corner-all {
+      background: none;
+      border: none;
+      font-family: "Geologica", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+      color: #0069F2;
+      cursor: pointer;
+      }
+      /* End */
+
+      @media only screen and (max-width: 768px) {
+      body {
+      margin: 0;
+      }
+      table.containerWrapper.tbContainer.multi tr {
+      flex-direction: column;
+      }
+      .marketingForm .primaryButton,
+      .submitButton {
+      padding: 16px 20px;
+      }
+      table.outer.error-space {
+      margin-bottom: 0;
+      }
+      input.invalid + .error-message,
+      select.invalid + .error-message,
+      textarea.invalid ~ .error-message,
+      .twoOptionFormFieldBlock div.radiobuttons.error ~ .error-message,
+      .phoneFormFieldBlock.invalid .error-message,
+      .twoOptionFormFieldBlock div.radiobuttons input.invalid + .error-message {
+      margin-bottom: 1rem;
+      }
+      .marketingForm a span {
+      line-height: inherit !important;
+      }
+      .marketingForm .multi table {
+      table-layout: fixed;
+      height: auto !important;
+      }
+      .marketingForm .multi td {
+      width: auto !important;
+      min-height: auto !important;
+      }
+      .marketingForm .multi tbody,
+      .marketingForm .multi tbody tr,
+      .marketingForm .multi tbody tr td,
+      .marketingForm .multi tbody tr th,
+      .marketingForm .outer tbody,
+      .marketingForm .outer tbody tr,
+      .marketingForm .outer tbody tr td,
+      .marketingForm .outer tbody tr th {
+      display: block;
+      box-sizing: border-box;
+      height: auto !important;
+      min-height: auto !important;
+      }
+      .marketingForm .wrap-section .multi tbody,
+      .marketingForm .wrap-section .multi tbody tr,
+      .marketingForm .wrap-section .multi tbody tr td,
+      .marketingForm .wrap-section .multi tbody tr th,
+      .marketingForm .wrap-section .outer tbody,
+      .marketingForm .wrap-section .outer tbody tr,
+      .marketingForm .wrap-section .outer tbody tr td,
+      .marketingForm .wrap-section .outer tbody tr th {
+      width: 100% !important;
+      }
+      .marketingForm .multi .inner {
+      height: auto !important;
+      min-height: auto !important;
+      }
+      .marketingForm .tbContainer .inner {
+      box-sizing: border-box;
+      }
+      .marketingForm .outer {
+      width: 100% !important;
+      }
+      .marketingForm .tbContainer .columnContainer table {
+      table-layout: fixed !important;
+      }
+      .marketingForm .innerTable {
+      min-height: auto !important;
+      }
+      .marketingForm .no-wrap-section .outer {
+      display: table !important;
+      }
+      .marketingForm .no-wrap-section .multi table {
+      height: 100% !important;
+      }
+      .marketingForm .no-wrap-section .multi tbody,
+      .marketingForm .no-wrap-section .outer tbody {
+      display: table-row-group !important;
+      width: 100% !important;
+      }
+      .marketingForm .no-wrap-section .multi tbody tr,
+      .marketingForm .no-wrap-section .outer tbody tr {
+      display: table-row !important;
+      width: 100% !important;
+      }
+      .marketingForm .no-wrap-section .multi tbody tr td,
+      .marketingForm .no-wrap-section .multi tbody tr th,
+      .marketingForm .no-wrap-section .outer tbody tr td,
+      .marketingForm .no-wrap-section .outer tbody tr th {
+      display: table-cell !important;
+      }
+      .marketingForm .no-wrap-section.columns-equal-class .outer tbody tr td,
+      .marketingForm .no-wrap-section.columns-equal-class .outer tbody tr th {
+      height: 0px !important;
+      }
+      .marketingForm .no-wrap-section .outer tbody tr td.inner,
+      .marketingForm .no-wrap-section .outer tbody tr th.inner {
+      width: 100% !important;
+      height: auto !important;
+      }
+      .marketingForm a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      }
+      }
+      </style>
+    
+  </head>
+  <body>
+    <form id="marketingForm" class="marketingForm" novalidate>
+      <div data-layout="true" data-layout-version="v2" style="max-width:600px; margin:auto;">
+        <div class="notification-container">
+          <div class="notification-message notification-message-hide" data-notification-name="eventNotStarted">
+            <div>This event has not started.</div>
+          </div>
+          <div class="notification-message notification-message-hide" data-notification-name="eventAtCapacity">
+            <div>This event is fully booked</div>
+          </div>
+          <div class="notification-message notification-message-hide" data-notification-name="eventEnded">
+            <div>This event has ended.</div>
+          </div>
+          <div class="notification-message notification-message-hide" data-notification-name="sessionsFullyBookedEventHasCapacity">
+            <div>All sessions are fully booked but you can still register for the event.</div>
+          </div>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:8px">
+                  <table style="width:100%; border-collapse:collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="100" style="vertical-align:top; min-width:5px; width:580px; padding:0px; height:0px;" id="container905500fc0f5471738704945097">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="inner" style="min-width:5px; padding:0px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div data-editorblocktype="Image" style="margin: 20px; padding: 0px;">
+                                    <div align="Center" class="imageWrapper" style="" data-image-file-id="45b95d1f-43e3-ef11-be1f-000d3a79a8a3">
+                                      <img src="https://assets-oce.mkt.dynamics.com/20d74e5b-94d3-ef11-b8e5-002248e341c8/digitalassets/images/45b95d1f-43e3-ef11-be1f-000d3a79a8a3?ts=638743031024388389" style="max-height:100%; max-width:100%; box-sizing:border-box; display:block; border-radius:0px;">
+                                    </div>
+                                  </div>
+                                  <div data-editorblocktype="Text" style="padding:20px 10px 32px 10px;">
+                                    <p style="margin-bottom:.5rem"><strong>Refer ME and be rewarded.</strong></p>
+                                    <p>Use this form to support your customers with their home loan needs by referring them to a local ME Banker. Once you’ve submitted your referral, you can sit back and relax while we do what we do best – offering quality, competitive home loan products and friendly, personal service.</p>
+                                    <p><br></p>
+                                    <p style="margin-bottom:.5rem"><strong>Questions?</strong></p>
+                                    <p>We’ll work closely with you to ensure the program is mutually beneficial and you have what you need to get the most from it.</p>
+                                    <p><br></p>
+                                    <p>For any enquiries relating to the referral network or process, please contact your local ME Banker or email Retail.Referrers@boq.com.au.</p>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="margin:0px; border-radius:0px;">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:0 8px; border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px;">
+                  <table style="width: 100%; border-collapse: collapse;" class="containerWrapper tbContainer multi" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="container9e62c578ede171738702973140">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="contact" data-targetproperty="firstname" data-prefill="false" data-required="required">
+                                    <label title="First Name" for="firstname-1738702992402">First Name</label>
+                                    <input id="firstname-1738702992402" type="text" name="firstname" placeholder="" title="First Name" maxlength="50" required="required">
+                                    <div class="error-message">Please enter a valid first name.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="container47e21e9c649051738702973140">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="contact" data-targetproperty="lastname" data-required="required" data-prefill="false">
+                                    <label title="Last Name" for="lastname-1738702999270">Last Name</label>
+                                    <input id="lastname-1738702999270" type="text" name="lastname" placeholder="" title="Last Name" maxlength="50" required="required">
+                                    <div class="error-message">Please enter a valid last name.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="margin:0px; border-radius:0px;">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:0 8px; border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px;">
+                  <table style="width: 100%; border-collapse: collapse;" class="containerWrapper tbContainer multi" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="container9d70431cb25221738703032738">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="contact" data-targetproperty="accountidname" data-prefill="false" data-required="required">
+                                    <label title="accountidname" for="accountidname-1738703042093">
+                                      <span style="display: inline !important;">Lead Referral Code</span>
+                                    </label>
+                                    <input id="accountidname-1738703042093" type="text" name="accountidname" placeholder="" title="accountidname" maxlength="100" required="required">
+                                    <div class="error-message">Please enter a referral code.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="containera9db02f9128a81738703032738">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="optionSetFormFieldBlock" data-editorblocktype="OptionSetFormField" data-targetaudience="contact" data-targetproperty="address1_addresstypecode" data-prefill="false" data-required="required">
+                                    <label title="Address 1: Address Type" class="block-label" for="address1_addresstypecode-1738703054050">
+                                      <span style="display: inline !important;">Best time to call the customer?</span>
+                                    </label>
+                                    <div class="custom-select">
+                                        <select id="address1_addresstypecode-1738703054050" name="address1_addresstypecode" title="Address 1: Address Type" required="">
+                                            <option value="" hidden="">Select a time</option>
+                                            <option id="address1_addresstypecode-1738703054050-1" value="1">Anytime</option>
+                                            <option id="address1_addresstypecode-1738703054050-2" value="2">Morning (9am - 12pm)</option>
+                                            <option id="address1_addresstypecode-1738703054050-3" value="3">Afternoon (12pm - 3pm)</option>
+                                            <option id="address1_addresstypecode-1738703054050-4" value="4">Evening (3pm - 6pm)</option>
+                                        </select>
+                                    </div>
+                                    <div class="error-message">Please choose a call time.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="margin:0px; border-radius:0px;">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:0 8px; border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px;">
+                  <table style="width: 100%; border-collapse: collapse;" class="containerWrapper tbContainer multi" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="containerb13f6ace609a61738703095758">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="phoneFormFieldBlock" data-editorblocktype="PhoneFormField" data-targetaudience="contact" data-targetproperty="address1_telephone1" data-countrycode="+61" data-prefill="false" data-required="required">
+                                    <label for="address1_telephone1-1738703107764" title="Address 1: Phone">Phone Number</label>
+                                    <div class="phoneCountryCode"><span class="phoneCountryCodeLabel">+61</span><input id="address1_telephone1-1738703107764" type="tel" name="address1_telephone1" placeholder="" title="Address 1: Phone" pattern="(\+[\(]?[0-9]{1,4}|[\(]?00[0-9]{0,2}|[\(]?011[0-9]?|[\(]?010[0-9]?)[\)]?([ \-\(\)]*[0-9][ \-\(\)]*){3,16}|([ \-\(\)]*[0-9][ \-\(\)]*){3,16}" required="required"></div>
+                                    <div class="error-message">Please enter a valid phone number.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="containerf42fbbb0fab581738703095758">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="contact" data-targetproperty="emailaddress1" data-prefill="false" data-required="required">
+                                    <label title="Email" for="emailaddress1-1738703142632">Email</label>
+                                    <input id="emailaddress1-1738703142632" type="email" name="emailaddress1" placeholder="" title="Email" pattern="[^@\s\\&quot;<>\)\(\[\]:;,.]+(([.]{1}[^@\s\\&quot;<>\)\(\[\]:;,.]+)+?|)@([^@\s\\&quot;<>\)\(\[\]\+:;,\.\-]+(((\.|\+|-|--)[^@\s\\&quot;<>\)\(\[\]+:;,.\-]+)+?|)([.][^0-9@\s\\&quot;<>\)\(\[\]+:;,.\-]+)+?)" required="required">
+                                    <div class="error-message">Please enter a valid email address.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="margin:0px; border-radius:0px;">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:0 8px; border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px;">
+                  <table style="width: 100%; border-collapse: collapse;" class="containerWrapper tbContainer multi" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="container62dc71cb711de1738703212003">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="contact" data-targetproperty="businesscardattributes" data-prefill="false" data-required="required">
+                                    <label title="BusinessCardAttributes" for="businesscardattributes-1738703216998">Postcode</label>
+                                    <input id="businesscardattributes-1738703216998" type="text" name="businesscardattributes" placeholder="" title="BusinessCardAttributes" maxlength="4" required="required">
+                                    <div class="error-message">Please enter a valid postcode.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="containerc7ea6c52c199c1738703212003">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="contact" data-targetproperty="fax" data-prefill="false" data-required="required">
+                                    <label title="Fax" for="fax-1738703254532">Suburb</label>
+                                    <input id="fax-1738703254532" type="text" name="fax" placeholder="" title="Fax" maxlength="50" required="required">
+                                    <div class="error-message">Please enter a valid suburb.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="margin:0px; border-radius:0px;">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:0 8px; border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px;">
+                  <table style="width: 100%; border-collapse: collapse;" class="containerWrapper tbContainer multi" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="container8c6ca268b23cc1738703281316">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="optionSetFormFieldBlock" data-editorblocktype="OptionSetFormField" data-targetaudience="contact" data-targetproperty="educationcode" data-prefill="false" data-required="required">
+                                    <label title="Education" class="block-label" for="educationcode-1738703298628">State</label>
+                                    <div class="custom-select">
+                                        <select id="educationcode-1738703298628" name="educationcode" title="Education" required="">
+                                              <option value="" hidden="">Choose your state</option>
+                                              <option id="educationcode-1738703298628-1" value="1">Australian Capital Territory</option>
+                                              <option id="educationcode-1738703298628-2" value="2">New South Wales</option>
+                                              <option id="educationcode-1738703298628-3" value="3">Northern Territory</option>
+                                              <option id="educationcode-1738703298628-4" value="4">Queensland</option>
+                                              <option id="educationcode-1738703298628-5" value="5">South Australia</option>
+                                              <option id="educationcode-1738703298628-6" value="6">Tasmania</option>
+                                              <option id="educationcode-1738703298628-7" value="7">Victoria</option>
+                                              <option id="educationcode-1738703298628-8" value="8">Western Australia</option>
+                                        </select>
+                                    </div>
+                                    <div class="error-message">Please choose a state.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="container1ab73144f9ff21738703281316">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                    
+                                    <div class="dateTimeFormFieldBlock" data-editorblocktype="DateTimeFormField" data-targetaudience="contact" data-targetproperty="adx_profilealertdate" data-prefill="false" data-required="required">
+                                    <label title="Profile Alert Date" for="adx_profilealertdate-1738703335799">Follow Up By</label>
+                                    <input class="datepicker" id="adx_profilealertdate-1738703335799" type="text" name="adx_profilealertdate" placeholder="Select a date" title="Select a date" required="required">
+                                    <div class="error-message">Please choose a date.</div>
+                                    </div>
+
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="margin:0px; border-radius:0px;">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:0 16px; border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px;">
+                  <table style="width:100%; border-collapse:collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="100" style="vertical-align:top; min-width:5px; width:600px; padding:0px; height:0px;" id="container994a0c57ceb661738703425247">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="inner" style="min-width:5px; padding:0px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                    
+                                    <div class="textFormFieldBlock" data-editorblocktype="TextAreaFormField" data-targetaudience="lead" data-targetproperty="address1_composite" data-prefill="false" data-prefill="false" data-required="required">
+                                        <label title="Address 1" for="address1_composite-1738703412855">Please provide us with a short description of the purpose for which the consumer may want the loan (if known)</label>
+                                        <textarea id="address1_composite-1738703412855" name="address1_composite" placeholder="" title="Address 1" cols="20" rows="5" maxlength="400" required="required"></textarea>
+                                        <div id="charCount" class="char-count">0/400</div>
+                                        <div class="error-message">Please provide a description.</div>
+                                    </div>
+
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="margin:0px; border-radius:0px;">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:0 8px; border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px;">
+                  <table style="width: 100%; border-collapse: collapse;" class="containerWrapper tbContainer multi" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="container7cd1684f23ebc1738703599183">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="optionSetFormFieldBlock" data-editorblocktype="OptionSetFormField" data-targetaudience="contact" data-targetproperty="address1_shippingmethodcode" data-prefill="false" data-required="required">
+                                    <label title="Address 1: Shipping Method" class="block-label" for="address1_shippingmethodcode-1738703535577">
+                                      <span style="display: inline !important;">Product Category</span>
+                                    </label>
+                                    <div class="custom-select">
+                                        <select id="address1_shippingmethodcode-1738703535577" name="address1_shippingmethodcode" title="Address 1: Shipping Method" required="">
+                                              <option value="" hidden="">Select a category</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-1" value="1">Asset/Equipment Finance</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-2" value="2">Business Lending</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-3" value="3">Business Savings Account</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-4" value="4">Business Transaction Account</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-5" value="5">Credit Cards</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-6" value="6">Financial Markets</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-7" value="7">Home Loans</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-8" value="8">Insurance</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-9" value="9">Investing</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-10" value="10">Line of Credit</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-11" value="11">Merchant Facility</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-12" value="12">Other</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-13" value="13">Personal Lending</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-14" value="14">Personal Savings Account</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-15" value="15">Personal Transaction Account</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-16" value="16">Term Deposit</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-17" value="17">Everyday Banking</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-18" value="18">Savings and Deposits</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-19" value="19">Commercial Property Finance</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-20" value="20">Fit-out Finance</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-21" value="21">Goodwill and Practice Purchase Loans</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-22" value="22">Business Banking</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-23" value="23">Car Loans</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-24" value="24">Personal Loans</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-25" value="25">Help or Support</option>
+                                              <option id="address1_shippingmethodcode-1738703535577-26" value="26">Upcoming Events</option>
+                                        </select>
+                                    </div>
+                                    <div class="error-message">Please choose a date.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                        <th data-container="true" class="columnContainer" data-container-width="50" style="vertical-align:top; min-width:5px; width:300px; padding:0px; height:0px;" id="container29ca91075dfe31738703599183">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="columnContainer inner" style="min-width:5px; padding:0 8px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="optionSetFormFieldBlock" data-editorblocktype="OptionSetFormField" data-targetaudience="contact" data-targetproperty="address1_freighttermscode" data-prefill="false" data-required="required">
+                                    <label title="Address 1: Freight Terms" class="block-label" for="address1_freighttermscode-1738703610471">
+                                      <span style="display: inline !important;">Lead Source</span>
+                                    </label>
+                                    <div class="custom-select">
+                                        <select id="address1_freighttermscode-1738703610471" name="address1_freighttermscode" title="Address 1: Freight Terms" required="">
+                                              <option value="" hidden="">Select a source</option>
+                                              <option id="address1_freighttermscode-1738703610471-1" value="1">#N/A</option>
+                                              <option id="address1_freighttermscode-1738703610471-2" value="2">Advertisement</option>
+                                              <option id="address1_freighttermscode-1738703610471-3" value="3">BOQ Analytics</option>
+                                              <option id="address1_freighttermscode-1738703610471-4" value="4">Community Event</option>
+                                              <option id="address1_freighttermscode-1738703610471-5" value="5">Comparison Site</option>
+                                              <option id="address1_freighttermscode-1738703610471-6" value="6">Customer Event/Seminar</option>
+                                              <option id="address1_freighttermscode-1738703610471-7" value="7">Direct Enquiry</option>
+                                              <option id="address1_freighttermscode-1738703610471-8" value="8">Display</option>
+                                              <option id="address1_freighttermscode-1738703610471-9" value="9">Event</option>
+                                              <option id="address1_freighttermscode-1738703610471-10" value="10">Letterbox</option>
+                                              <option id="address1_freighttermscode-1738703610471-11" value="11">Other</option>
+                                              <option id="address1_freighttermscode-1738703610471-12" value="12">Other Digital</option>
+                                              <option id="address1_freighttermscode-1738703610471-13" value="13">Out of Home</option>
+                                              <option id="address1_freighttermscode-1738703610471-14" value="14">Partner</option>
+                                              <option id="address1_freighttermscode-1738703610471-15" value="15">Radio/Audio</option>
+                                              <option id="address1_freighttermscode-1738703610471-16" value="16">Referral</option>
+                                              <option id="address1_freighttermscode-1738703610471-17" value="17">Referral Partner/Workplace Offer</option>
+                                              <option id="address1_freighttermscode-1738703610471-18" value="18">Search</option>
+                                              <option id="address1_freighttermscode-1738703610471-19" value="19">Service Action</option>
+                                              <option id="address1_freighttermscode-1738703610471-20" value="20">Social</option>
+                                              <option id="address1_freighttermscode-1738703610471-21" value="21">Social Media</option>
+                                              <option id="address1_freighttermscode-1738703610471-22" value="22">Sponsorship</option>
+                                              <option id="address1_freighttermscode-1738703610471-23" value="23">Trade Show/Expo</option>
+                                              <option id="address1_freighttermscode-1738703610471-24" value="24">TV/Cinema/Press</option>
+                                              <option id="address1_freighttermscode-1738703610471-25" value="25">Website</option>
+                                              <option id="address1_freighttermscode-1738703610471-26" value="26">BOQ Website</option>
+                                              <option id="address1_freighttermscode-1738703610471-27" value="27">Landing Page</option>
+                                              <option id="address1_freighttermscode-1738703610471-28" value="28">LinkedIn Sponsored Form</option>
+                                              <option id="address1_freighttermscode-1738703610471-29" value="29">Journey</option>
+                                        </select>
+                                    </div>
+                                    <div class="error-message">Please choose a date.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="margin:0px; border-radius:0px;">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:0 16px; border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px;">
+                  <table style="width:100%; border-collapse:collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="100" style="vertical-align:top; min-width:5px; width:600px; padding:0px; height:0px;" id="container698b64b147d11738703642073">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="inner" style="min-width:5px; padding:0px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="contact" data-targetproperty="address1_city" data-prefill="false" data-required="required">
+                                    <label title="Address 1: City" for="address1_city-1738703624167">
+                                      <span style="display: inline !important;">Lead Source Campaign</span>
+                                    </label>
+                                    <input id="address1_city-1738703624167" type="text" name="address1_city" placeholder="" title="Address 1: City" maxlength="80" required="required">
+                                    <div class="error-message">Please enter a source campaign.</div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:0 8px">
+                  <table style="width:100%; border-collapse:collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="100" style="vertical-align:top; min-width:5px; width:580px; padding:0px; height:0px;" id="containerb634f507a2ac51738703685063">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="inner" style="min-width:5px; padding:0px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div data-editorblocktype="Text" style="margin:10px;">
+                                    <p>By completing and submitting this form, you confirm the following:</p>
+                                  </div>
+                                  <div class="twoOptionFormFieldBlock" data-editorblocktype="TwoOptionFormField" data-targetaudience="contact" data-targetproperty="adx_confirmremovepassword" data-options="[{&quot;value&quot;:&quot;1&quot;,&quot;label&quot;:&quot;Yes&quot;},{&quot;value&quot;:&quot;0&quot;,&quot;label&quot;:&quot;No&quot;}]" data-prefill="false" data-required="required">
+                                    <div class="twooption_checkbox">
+                                      <div>
+                                        <input type="checkbox" id="adx_confirmremovepassword-1738703649605" name="adx_confirmremovepassword" value="1" title="Confirm Remove Password" required="required">
+                                        <label title="Confirm Remove Password" class="block-label" for="adx_confirmremovepassword-1738703649605">The customer detailed above has provided express consent to pass on their personal information to ME and understands they will be contacted by us</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="twoOptionFormFieldBlock" data-editorblocktype="TwoOptionFormField" data-targetaudience="contact" data-targetproperty="isautocreate" data-options="[{&quot;value&quot;:&quot;1&quot;,&quot;label&quot;:&quot;Yes&quot;},{&quot;value&quot;:&quot;0&quot;,&quot;label&quot;:&quot;No&quot;}]" data-prefill="false" data-required="required">
+                                    <div class="twooption_checkbox">
+                                      <div>
+                                        <input type="checkbox" id="isautocreate-1738703738579" name="isautocreate" value="1" title="Auto-created" required="required">
+                                        <label title="Auto-created" class="block-label" for="isautocreate-1738703738579">You are providing us with the customer’s details within 5 business days after informing the customer about ME or our products</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="twoOptionFormFieldBlock" data-editorblocktype="TwoOptionFormField" data-targetaudience="contact" data-targetproperty="isbackofficecustomer" data-options="[{&quot;value&quot;:&quot;1&quot;,&quot;label&quot;:&quot;Yes&quot;},{&quot;value&quot;:&quot;0&quot;,&quot;label&quot;:&quot;No&quot;}]" data-prefill="false" data-required="required">
+                                    <div class="twooption_checkbox">
+                                      <div>
+                                        <input type="checkbox" id="isbackofficecustomer-1738704276354" name="isbackofficecustomer" value="1" title="Back Office Customer" required="required">
+                                        <label title="Back Office Customer" class="block-label" for="isbackofficecustomer-1738704276354">You have advised the customer of any benefit you might receive from us for making the referral if a loan is made</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="twoOptionFormFieldBlock" data-editorblocktype="TwoOptionFormField" data-targetaudience="contact" data-targetproperty="creditonhold" data-options="[{&quot;value&quot;:&quot;1&quot;,&quot;label&quot;:&quot;Yes&quot;},{&quot;value&quot;:&quot;0&quot;,&quot;label&quot;:&quot;No&quot;}]" data-prefill="false" data-required="required">
+                                    <div class="twooption_checkbox">
+                                      <div>
+                                        <input type="checkbox" id="creditonhold-1738704280919" name="creditonhold" value="1" title="Credit Hold" required="required">
+                                        <label title="Credit Hold" class="block-label" for="creditonhold-1738704280919">You have not made suggestions to the customer to apply for any particular ME product or otherwise assisted the customer to apply for a particular product (including collecting any documentation).</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="margin:0px; border-radius:0px;">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:16px; border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px;">
+                  <table style="width:100%; border-collapse:collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="100" style="vertical-align:top; min-width:5px; width:600px; padding:0px; height:0px;" id="containerfce8cdc2113ac1738704312920">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="inner" style="min-width:5px; padding:0px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div data-editorblocktype="SubmitButton" class="submitButtonWrapper">
+                                    <button class="submitButton" type="submit" aria-label="Submit" style="">
+                                      <span style="">Submit</span>
+                                    </button>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section">
+          <table class="outer" align="center" cellpadding="0" cellspacing="0" style="width:600px; display:block;">
+            <tbody>
+              <tr>
+                <th style="padding:10px">
+                  <table style="width:100%; border-collapse:collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th data-container="true" class="columnContainer" data-container-width="100" style="vertical-align:top; min-width:5px; width:580px; padding:0px; height:0px;" id="containera21b80d42cf21738704340518">
+                          <table width="100%" cellpadding="0" cellspacing="0" style="height:100%;">
+                            <tbody>
+                              <tr>
+                                <th class="inner" style="min-width:5px; padding:0px; vertical-align:top; overflow-wrap:break-word; word-wrap:break-word; word-break:break-word; background-color:rgba(0, 0, 0, 0); border-color:rgb(0, 0, 0); border-width:0px; border-style:none; border-radius:0px; font-weight:normal;">
+                                  <div data-editorblocktype="Text" style="margin: 10px;">
+                                    <p style="margin-bottom:.5rem"><strong>Disclaimer:</strong></p>
+                                    <p>Credit provided by ME Bank, a division of Bank of Queensland Limited ABN 32 009 656 740 AFSL and Australian Credit Licence 244616. ME’s Referrer Program is subject to the terms and conditions detailed in the ME Referrer Program Agreement.</p>
+                                  </div>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </form>
+
+    <script type="text/javascript">
+       // Character count in text box
+       const textBox = document.querySelector("textarea");
+         const charCount = document.getElementById("charCount");
+
+         if (textBox) {
+             textBox.addEventListener("input", () => {
+                 const currentLength = textBox.value.length;
+                 const maxLength = textBox.maxLength;
+                 charCount.textContent = `${currentLength}/${maxLength}`;
+             });
+         }
+       // End
+
+
+       // Custom Error Message
+       const form = document.getElementById('marketingForm');
+       const inputs = form.querySelectorAll('input');
+
+       inputs.forEach(input => {
+           const eventType = input.type === 'radio' ? 'change' : 'blur';
+           input.addEventListener(eventType, () => {
+               validateInput(input);
+               updateParentStyling(input);
+           });
+       });
+
+       function validateInput(input) {
+           if (input.type === 'radio') {
+               const radioGroup = form.querySelectorAll(`input[name="${input.name}"]`);
+               const isChecked = Array.from(radioGroup).some(radio => radio.checked);
+
+               radioGroup.forEach(radio => {
+                   if (!isChecked) {
+                       radio.classList.add('invalid');
+                   } else {
+                       radio.classList.remove('invalid');
+                   }
+               });
+           } else {
+               if (!input.validity.valid) {
+                   input.classList.add('invalid');
+               } else {
+                   input.classList.remove('invalid');
+               }
+           }
+       }
+
+       function updateParentStyling(input) {
+           const parentBlock = input.closest('.phoneFormFieldBlock');
+           if (parentBlock) {
+               if (input.classList.contains('invalid')) {
+                   parentBlock.classList.add('invalid');
+               } else {
+                   parentBlock.classList.remove('invalid');
+               }
+           }
+       }
+
+       form.addEventListener('submit', function(e) {
+           let isValid = true;
+
+           inputs.forEach(input => {
+               validateInput(input);
+               updateParentStyling(input);
+
+               if (input.classList.contains('invalid')) {
+                   isValid = false;
+               }
+           });
+
+           if (!isValid) {
+               e.preventDefault();
+           }
+       });
+       // End
+
+       // Error Message on Dropdown and Text Area Options
+       document.addEventListener('DOMContentLoaded', function() {
+           const selectElements = document.querySelectorAll('select');
+           const textareaElements = document.querySelectorAll('textarea');
+
+           function validateSelects() {
+               selectElements.forEach(selectElement => {
+                   if (selectElement.value === "") {
+                       selectElement.classList.add('invalid');
+                   } else {
+                       selectElement.classList.remove('invalid');
+                   }
+               });
+           }
+
+           function validateTextareas() {
+               textareaElements.forEach(textareaElement => {
+                   if (textareaElement.value.trim() === "") {
+                       textareaElement.classList.add('invalid');
+                   } else {
+                       textareaElement.classList.remove('invalid');
+                   }
+               });
+           }
+
+           document.querySelector('form').addEventListener('submit', function(event) {
+               validateSelects();
+               validateTextareas();
+
+               const selectsValid = Array.from(selectElements).every(selectElement => selectElement.value !== "");
+               const textareasValid = Array.from(textareaElements).every(textareaElement => textareaElement.value.trim() !== "");
+
+               if (!selectsValid || !textareasValid) {
+                   event.preventDefault();
+               }
+           });
+
+           selectElements.forEach(selectElement => {
+               selectElement.addEventListener('change', validateSelects);
+           });
+
+           textareaElements.forEach(textareaElement => {
+               textareaElement.addEventListener('input', validateTextareas);
+           });
+       });
+       // End
+
+       // Error Message for Radio Buttons
+       function checkInvalidInputs() {
+           const radiobuttonsDivs = document.querySelectorAll('.radiobuttons');
+
+           radiobuttonsDivs.forEach((radiobuttonsDiv) => {
+               const hasInvalidInput = Array.from(radiobuttonsDiv.querySelectorAll('input'))
+                   .some(input => input.classList.contains('invalid'));
+
+               if (hasInvalidInput) {
+                   radiobuttonsDiv.classList.add('error');
+               } else {
+                   radiobuttonsDiv.classList.remove('error');
+               }
+           });
+       }
+
+       const observer = new MutationObserver((mutationsList) => {
+           mutationsList.forEach((mutation) => {
+               if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                   checkInvalidInputs();
+               }
+           });
+       });
+
+       document.querySelectorAll('.radiobuttons input').forEach((input) => {
+           observer.observe(input, {
+               attributes: true
+           });
+       });
+
+       checkInvalidInputs();
+       // End
+
+       // Error Message for Drop Down Select
+       document.addEventListener("DOMContentLoaded", function() {
+           const form = document.querySelector("form");
+
+           form.addEventListener("submit", function(event) {
+               const optionBlocks = document.querySelectorAll(".optionSetFormFieldBlock");
+               let hasError = false;
+
+               optionBlocks.forEach(block => block.classList.remove("error"));
+
+               optionBlocks.forEach((block) => {
+                   const selectElement = block.querySelector("select");
+
+                   if (selectElement && !selectElement.checkValidity()) {
+                       selectElement.classList.add("invalid");
+                       block.classList.add("error");
+                       hasError = true;
+                   } else {
+                       selectElement.classList.remove("invalid");
+                   }
+               });
+
+               if (hasError) {
+                   event.preventDefault();
+               }
+           });
+
+           const optionBlocks = document.querySelectorAll(".optionSetFormFieldBlock");
+           optionBlocks.forEach(block => {
+               const selectElement = block.querySelector("select");
+
+               if (selectElement) {
+                   selectElement.addEventListener("change", function() {
+                       if (selectElement.classList.contains("invalid")) {
+                           selectElement.classList.remove("invalid");
+                           block.classList.remove("error");
+                       }
+                   });
+               }
+           });
+       });
+       // End
+
+       // Additional spacing for error messages
+       function checkOuterForInvalid() {
+           const outerDivs = document.querySelectorAll('.outer');
+
+           outerDivs.forEach((outerDiv) => {
+               const hasInvalidElement = outerDiv.querySelector('.invalid') !== null;
+
+               if (hasInvalidElement) {
+                   outerDiv.classList.add('error-space');
+               } else {
+                   outerDiv.classList.remove('error-space');
+               }
+           });
+       }
+
+       const outerObserver = new MutationObserver((mutationsList) => {
+           mutationsList.forEach((mutation) => {
+               if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                   checkOuterForInvalid();
+               }
+           });
+       });
+
+       document.querySelectorAll('.outer *').forEach((element) => {
+           outerObserver.observe(element, {
+               attributes: true
+           });
+       });
+
+       checkOuterForInvalid();
+       //End
+
+       // Select Drop Down Error Message Script
+       document.querySelector('form').addEventListener('submit', function(event) {
+           const selectElement = document.querySelector('select[name="msdyn_salesassignmentresult"]');
+           const customSelectDiv = document.querySelector('.custom-select');
+
+           if (selectElement.classList.contains('invalid')) {
+               customSelectDiv.classList.add('error');
+           } else {
+               customSelectDiv.classList.remove('error');
+           }
+       });
+       // End
+
+       // Select Dropdown Custom Styles
+       var x, i, j, l, ll, selElmnt, a, b, c;
+       x = document.getElementsByClassName("custom-select");
+       l = x.length;
+       for (i = 0; i < l; i++) {
+           selElmnt = x[i].getElementsByTagName("select")[0];
+           ll = selElmnt.length;
+           a = document.createElement("DIV");
+           a.setAttribute("class", "select-selected");
+           a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+           x[i].appendChild(a);
+           b = document.createElement("DIV");
+           b.setAttribute("class", "select-items select-hide");
+           for (j = 1; j < ll; j++) {
+               c = document.createElement("DIV");
+               c.innerHTML = selElmnt.options[j].innerHTML;
+               c.addEventListener("click", function(e) {
+                   var y, i, k, s, h, sl, yl;
+                   s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                   sl = s.length;
+                   h = this.parentNode.previousSibling;
+                   for (i = 0; i < sl; i++) {
+                       if (s.options[i].innerHTML == this.innerHTML) {
+                           s.selectedIndex = i;
+                           h.innerHTML = this.innerHTML;
+
+                           h.classList.add("has-selection");
+
+                           y = this.parentNode.getElementsByClassName("same-as-selected");
+                           yl = y.length;
+                           for (k = 0; k < yl; k++) {
+                               y[k].removeAttribute("class");
+                           }
+                           this.setAttribute("class", "same-as-selected");
+                           break;
+                       }
+                   }
+                   h.click();
+               });
+               b.appendChild(c);
+           }
+           x[i].appendChild(b);
+           a.addEventListener("click", function(e) {
+               e.stopPropagation();
+               closeAllSelect(this);
+               this.nextSibling.classList.toggle("select-hide");
+               this.classList.toggle("select-arrow-active");
+           });
+       }
+
+       function closeAllSelect(elmnt) {
+           var x, y, i, xl, yl, arrNo = [];
+           x = document.getElementsByClassName("select-items");
+           y = document.getElementsByClassName("select-selected");
+           xl = x.length;
+           yl = y.length;
+           for (i = 0; i < yl; i++) {
+               if (elmnt == y[i]) {
+                   arrNo.push(i);
+               } else {
+                   y[i].classList.remove("select-arrow-active");
+               }
+           }
+           for (i = 0; i < xl; i++) {
+               if (arrNo.indexOf(i)) {
+                   x[i].classList.add("select-hide");
+               }
+           }
+       }
+       document.addEventListener("click", closeAllSelect);
+       // End
+
+       // Date Calendar Scripts
+       $(function() {
+           $(".datepicker").datepicker({
+               dateFormat: "dd-mm-yy",
+               duration: "fast",
+               showButtonPanel: true,
+               currentText: "Today",
+               beforeShow: function(input, inst) {
+                   setTimeout(function() {
+                       var buttonPanel = $(inst.dpDiv).find(".ui-datepicker-buttonpane");
+
+                       buttonPanel.find("button.ui-datepicker-close").remove();
+
+                       if (buttonPanel.find(".ui-datepicker-clear").length === 0) {
+                           $("<button>", {
+                               text: "Clear",
+                               class: "ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all",
+                               click: function() {
+                                   $(input).val("").removeClass("has-date");
+                                   $(".datepicker").datepicker("hide");
+                               }
+                           }).prependTo(buttonPanel);
+                       }
+
+                       var todayButton = buttonPanel.find("button.ui-datepicker-current");
+                       if (todayButton.length) {
+                           todayButton.off("click").on("click", function() {
+                               var today = $.datepicker.formatDate("dd-mm-yy", new Date());
+                               $(input).val(today).addClass("has-date");
+                               $(".datepicker").datepicker("hide");
+                           });
+                           todayButton.appendTo(buttonPanel);
+                       }
+                   }, 1);
+               },
+               onClose: function() {
+                   $(".ui-datepicker-clear").remove();
+               },
+               onSelect: function(dateText, inst) {
+                   if (dateText) {
+                       $(this).addClass("has-date");
+                   } else {
+                       $(this).removeClass("has-date");
+                   }
+               }
+           });
+       });
+       // End
+
+       // Tel Input Confirmation Styles
+       document.addEventListener("DOMContentLoaded", () => {
+           // Select the input inside the .phoneCountryCode div
+           const input = document.querySelector(".phoneCountryCode input");
+           const parentDiv = input.closest(".phoneCountryCode");
+
+           input.addEventListener("input", () => {
+               if (input.checkValidity()) {
+                   parentDiv.classList.add("valid");
+                   parentDiv.classList.remove("invalid");
+               } else {
+                   parentDiv.classList.add("invalid");
+                   parentDiv.classList.remove("valid");
+               }
+           });
+       });
+       // End
+      </script>
+
+  </body>
+</html>
